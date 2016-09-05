@@ -1,0 +1,42 @@
+<!--https://openclassrooms.com/courses/des-applications-ultra-rapides-avec-node-js/tp-la-todo-list -->
+
+    <!doctype html>
+    <html  lang="fr"  ng-app="todoApp">
+    <head>
+    <meta charset="UTF-8">
+
+</head>
+    <body>
+
+    <H2>TODOLISTS</H2>
+    <DIV>Liste
+
+
+
+
+
+<ul>
+
+
+<BR>Longueur= <%=vecth.length %>
+  <% for(var i=0;i<vecth.length ;i++) { %><li><a href="/todo/supprimer/:<%=i%>">
+x</a><%=vecth[i]%></li>
+<%}%>
+</ul>
+ 
+    </DIV>
+
+
+
+    <DIV>
+   
+<form  method="post" action="/ajouter">
+ <label>Entrer la tache à ajouter</label>
+  <input type="text" name="tachee" required> 
+<input type="submit" value="Submit">
+</form>
+
+</DIV>
+
+</body>
+    </html>

@@ -1,0 +1,109 @@
+//https://openclassrooms.com/courses/des-applications-ultra-rapides-avec-node-js/tp-la-todo-list
+/*jslint devel: true, vars: true */
+
+var express = require('express');
+
+var session = require('cookie-session'); // Charge le middleware de sessions
+
+var bodyParser = require('body-parser'); // Charge le middleware de gestion des paramètres
+
+var urlencodedParser = bodyParser.urlencoded({
+    extended: false
+});
+
+
+var app = express();
+
+
+
+/* On utilise les sessions */
+
+app.use(session({
+    secret: 'todotopsecret'
+}))
+
+
+
+/* Gestion des routes en-dessous
+
+   ....                         */
+
+
+
+.get('/', function (req, response) {
+    "use strict";
+    //https://nodejs.org/en/docs/guides/anatomy-of-an-http-transaction/
+    response.write('<html>'); response.write('<head>'); response.write(' <meta charset="UTF-8">'); response.write('</head>');
+    response.write('<body>');
+    response.write('<h1>Hello, World!</h1>');
+    response.write(' <ul>');
+
+    response.write(' </ul>');
+
+
+
+    var formm2 = function (varr) {
+        //"use strict";
+        var str;
+
+
+        //http://stackoverflow.com/questions/4295782/how-do-you-extract-post-data-in-node-js 
+        str = '<form method="post" action="/"><label for="tach">Ajouter Quelle tache?</label>  <input type="text" name="user[tache]"><input type="submit" value="Submit"></form>';
+	
+varr=  '<form method="post" action="/"><label for="tach">Ajouter Quelle tache?</label>  <input type="text" name="user[tache]"><input type="submit" value="Submit"></form>';
+        return varr;
+    }
+
+      var str2 = '<form method="post" onclick=""><label for="tach">Ajouter Quelle tache?</label>  <input type="text" name="user[tache]"><input type="submit" value="Submit"></form>';
+	
+   response.write(str2);
+
+
+/*
+  response.write('<form method="post" action="/">');
+ response.write('<label for="tach">Ajouter Quelle tache?</label>');
+ response.write('<input type="text" name="user[tache]">');
+ response.write('<input type="submit" value="Submit">');
+ response.write('</form>');
+*/
+ //  response.write('');
+
+    
+    response.write('</body>');
+    response.write('</html>');
+    response.end();
+});
+
+
+// ...
+
+
+
+
+app.post('/todo/ajouter/', function (req, res) {
+    "use strict";
+
+    // <li> </li>
+
+});
+
+
+
+/*moi*/
+app.put('/todo/supprimer/:id', function (req, res) {
+    "use strict";
+
+});
+
+
+
+
+
+
+
+
+
+// forms POST http://stackoverflow.com/questions/4295782/how-do-you-extract-post-data-in-node-js
+
+//use
+app.listen(3615);
