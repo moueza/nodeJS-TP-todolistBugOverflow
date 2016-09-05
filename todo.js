@@ -69,7 +69,7 @@ function vari(va){
     console.log("vari AV="+va);
     return va;
 }
-app.get('/todo/supprimer/id', function (req, res) {
+app.get('/todo/supprimer/:id', function (req, res) {
     "use strict";
     console.log("todolist id="+req.params.id);
       console.log("todolist id bis="+req.params.id);

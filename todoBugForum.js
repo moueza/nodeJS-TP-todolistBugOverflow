@@ -48,7 +48,7 @@ app.post('/todo/ajouter/', function (req, res) {
 
 
 
-app.get('/todo/supprimer/:id', function (req, res) {
+app.get('/todo/supprimer/id', function (req, res) {
     "use strict";
     
 
